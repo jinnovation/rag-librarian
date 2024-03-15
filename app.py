@@ -21,7 +21,7 @@ choices = st.multiselect(
     default=LIBRARY.keys(),
 )
 
-if st.button("Download books"):
+if st.button("Download books from Project Gutenberg"):
     if LIBRARY_PATH.exists():
         shutil.rmtree(LIBRARY_PATH)
 
