@@ -3,3 +3,4 @@ EbookLib
 html2text
 llama-index-embeddings-huggingface
 streamlit
+requests
