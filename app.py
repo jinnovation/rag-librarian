@@ -22,8 +22,11 @@ choices = st.multiselect(
 )
 
 if st.button("Download books"):
-    shutil.rmtree(LIBRARY_PATH)
+    if LIBRARY_PATH.exists():
+        shutil.rmtree(LIBRARY_PATH)
+
     LIBRARY_PATH.mkdir(parents=True, exist_ok=True)
+
     with st.spinner("Downloading..."):
         for choice in choices:
             url = LIBRARY[choice]
